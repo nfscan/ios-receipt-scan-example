@@ -1,0 +1,463 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A6FD5AC61AEADC6800376D9D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A6FD5AC51AEADC6800376D9D /* main.m */; };
+		A6FD5AC91AEADC6800376D9D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A6FD5AC81AEADC6800376D9D /* AppDelegate.m */; };
+		A6FD5ACF1AEADC6800376D9D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6FD5ACD1AEADC6800376D9D /* Main.storyboard */; };
+		A6FD5AD11AEADC6800376D9D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6FD5AD01AEADC6800376D9D /* Images.xcassets */; };
+		A6FD5AD41AEADC6800376D9D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6FD5AD21AEADC6800376D9D /* LaunchScreen.xib */; };
+		A6FD5AE01AEADC6800376D9D /* ios_receipt_scan_exampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A6FD5ADF1AEADC6800376D9D /* ios_receipt_scan_exampleTests.m */; };
+		A6FD5AEB1AEADCE300376D9D /* NFNCameraRectDetectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6FD5AEA1AEADCE300376D9D /* NFNCameraRectDetectionViewController.m */; };
+		A6FD5AED1AEADD0500376D9D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6FD5AEC1AEADD0500376D9D /* UIKit.framework */; };
+		A6FD5AEF1AEADD0B00376D9D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6FD5AEE1AEADD0B00376D9D /* AVFoundation.framework */; };
+		A6FD5AF11AEADD1300376D9D /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6FD5AF01AEADD1300376D9D /* CoreMedia.framework */; };
+		A6FD5AF31AEADD1B00376D9D /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6FD5AF21AEADD1B00376D9D /* CoreVideo.framework */; };
+		A6FD5AF51AEADD2600376D9D /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6FD5AF41AEADD2600376D9D /* CoreImage.framework */; };
+		A6FD5AF71AEADD3A00376D9D /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6FD5AF61AEADD3A00376D9D /* ImageIO.framework */; };
+		A6FD5AF91AEADD4E00376D9D /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6FD5AF81AEADD4E00376D9D /* GLKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A6FD5ADA1AEADC6800376D9D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A6FD5AB81AEADC6800376D9D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A6FD5ABF1AEADC6800376D9D;
+			remoteInfo = "ios-receipt-scan-example";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A6FD5AC01AEADC6800376D9D /* ios-receipt-scan-example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-receipt-scan-example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6FD5AC41AEADC6800376D9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A6FD5AC51AEADC6800376D9D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A6FD5AC71AEADC6800376D9D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A6FD5AC81AEADC6800376D9D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A6FD5ACE1AEADC6800376D9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A6FD5AD01AEADC6800376D9D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A6FD5AD31AEADC6800376D9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		A6FD5AD91AEADC6800376D9D /* ios-receipt-scan-exampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ios-receipt-scan-exampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6FD5ADE1AEADC6800376D9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A6FD5ADF1AEADC6800376D9D /* ios_receipt_scan_exampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ios_receipt_scan_exampleTests.m; sourceTree = "<group>"; };
+		A6FD5AE91AEADCE300376D9D /* NFNCameraRectDetectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NFNCameraRectDetectionViewController.h; sourceTree = "<group>"; };
+		A6FD5AEA1AEADCE300376D9D /* NFNCameraRectDetectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NFNCameraRectDetectionViewController.m; sourceTree = "<group>"; };
+		A6FD5AEC1AEADD0500376D9D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A6FD5AEE1AEADD0B00376D9D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		A6FD5AF01AEADD1300376D9D /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		A6FD5AF21AEADD1B00376D9D /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		A6FD5AF41AEADD2600376D9D /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		A6FD5AF61AEADD3A00376D9D /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		A6FD5AF81AEADD4E00376D9D /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A6FD5ABD1AEADC6800376D9D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6FD5AF91AEADD4E00376D9D /* GLKit.framework in Frameworks */,
+				A6FD5AF71AEADD3A00376D9D /* ImageIO.framework in Frameworks */,
+				A6FD5AF51AEADD2600376D9D /* CoreImage.framework in Frameworks */,
+				A6FD5AF31AEADD1B00376D9D /* CoreVideo.framework in Frameworks */,
+				A6FD5AF11AEADD1300376D9D /* CoreMedia.framework in Frameworks */,
+				A6FD5AEF1AEADD0B00376D9D /* AVFoundation.framework in Frameworks */,
+				A6FD5AED1AEADD0500376D9D /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A6FD5AD61AEADC6800376D9D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A6FD5AB71AEADC6800376D9D = {
+			isa = PBXGroup;
+			children = (
+				A6FD5AFA1AEADD6100376D9D /* Frameworks */,
+				A6FD5AC21AEADC6800376D9D /* ios-receipt-scan-example */,
+				A6FD5ADC1AEADC6800376D9D /* ios-receipt-scan-exampleTests */,
+				A6FD5AC11AEADC6800376D9D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A6FD5AC11AEADC6800376D9D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A6FD5AC01AEADC6800376D9D /* ios-receipt-scan-example.app */,
+				A6FD5AD91AEADC6800376D9D /* ios-receipt-scan-exampleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A6FD5AC21AEADC6800376D9D /* ios-receipt-scan-example */ = {
+			isa = PBXGroup;
+			children = (
+				A6FD5AC71AEADC6800376D9D /* AppDelegate.h */,
+				A6FD5AC81AEADC6800376D9D /* AppDelegate.m */,
+				A6FD5ACD1AEADC6800376D9D /* Main.storyboard */,
+				A6FD5AD01AEADC6800376D9D /* Images.xcassets */,
+				A6FD5AD21AEADC6800376D9D /* LaunchScreen.xib */,
+				A6FD5AC31AEADC6800376D9D /* Supporting Files */,
+				A6FD5AE91AEADCE300376D9D /* NFNCameraRectDetectionViewController.h */,
+				A6FD5AEA1AEADCE300376D9D /* NFNCameraRectDetectionViewController.m */,
+			);
+			path = "ios-receipt-scan-example";
+			sourceTree = "<group>";
+		};
+		A6FD5AC31AEADC6800376D9D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A6FD5AC41AEADC6800376D9D /* Info.plist */,
+				A6FD5AC51AEADC6800376D9D /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A6FD5ADC1AEADC6800376D9D /* ios-receipt-scan-exampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				A6FD5ADF1AEADC6800376D9D /* ios_receipt_scan_exampleTests.m */,
+				A6FD5ADD1AEADC6800376D9D /* Supporting Files */,
+			);
+			path = "ios-receipt-scan-exampleTests";
+			sourceTree = "<group>";
+		};
+		A6FD5ADD1AEADC6800376D9D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A6FD5ADE1AEADC6800376D9D /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A6FD5AFA1AEADD6100376D9D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A6FD5AF81AEADD4E00376D9D /* GLKit.framework */,
+				A6FD5AF61AEADD3A00376D9D /* ImageIO.framework */,
+				A6FD5AF41AEADD2600376D9D /* CoreImage.framework */,
+				A6FD5AF21AEADD1B00376D9D /* CoreVideo.framework */,
+				A6FD5AF01AEADD1300376D9D /* CoreMedia.framework */,
+				A6FD5AEE1AEADD0B00376D9D /* AVFoundation.framework */,
+				A6FD5AEC1AEADD0500376D9D /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A6FD5ABF1AEADC6800376D9D /* ios-receipt-scan-example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A6FD5AE31AEADC6800376D9D /* Build configuration list for PBXNativeTarget "ios-receipt-scan-example" */;
+			buildPhases = (
+				A6FD5ABC1AEADC6800376D9D /* Sources */,
+				A6FD5ABD1AEADC6800376D9D /* Frameworks */,
+				A6FD5ABE1AEADC6800376D9D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ios-receipt-scan-example";
+			productName = "ios-receipt-scan-example";
+			productReference = A6FD5AC01AEADC6800376D9D /* ios-receipt-scan-example.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A6FD5AD81AEADC6800376D9D /* ios-receipt-scan-exampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A6FD5AE61AEADC6800376D9D /* Build configuration list for PBXNativeTarget "ios-receipt-scan-exampleTests" */;
+			buildPhases = (
+				A6FD5AD51AEADC6800376D9D /* Sources */,
+				A6FD5AD61AEADC6800376D9D /* Frameworks */,
+				A6FD5AD71AEADC6800376D9D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A6FD5ADB1AEADC6800376D9D /* PBXTargetDependency */,
+			);
+			name = "ios-receipt-scan-exampleTests";
+			productName = "ios-receipt-scan-exampleTests";
+			productReference = A6FD5AD91AEADC6800376D9D /* ios-receipt-scan-exampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A6FD5AB81AEADC6800376D9D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Paulo Miguel Almeida Rodenas";
+				TargetAttributes = {
+					A6FD5ABF1AEADC6800376D9D = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					A6FD5AD81AEADC6800376D9D = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = A6FD5ABF1AEADC6800376D9D;
+					};
+				};
+			};
+			buildConfigurationList = A6FD5ABB1AEADC6800376D9D /* Build configuration list for PBXProject "ios-receipt-scan-example" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A6FD5AB71AEADC6800376D9D;
+			productRefGroup = A6FD5AC11AEADC6800376D9D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A6FD5ABF1AEADC6800376D9D /* ios-receipt-scan-example */,
+				A6FD5AD81AEADC6800376D9D /* ios-receipt-scan-exampleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A6FD5ABE1AEADC6800376D9D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6FD5ACF1AEADC6800376D9D /* Main.storyboard in Resources */,
+				A6FD5AD41AEADC6800376D9D /* LaunchScreen.xib in Resources */,
+				A6FD5AD11AEADC6800376D9D /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A6FD5AD71AEADC6800376D9D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A6FD5ABC1AEADC6800376D9D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6FD5AC91AEADC6800376D9D /* AppDelegate.m in Sources */,
+				A6FD5AC61AEADC6800376D9D /* main.m in Sources */,
+				A6FD5AEB1AEADCE300376D9D /* NFNCameraRectDetectionViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A6FD5AD51AEADC6800376D9D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6FD5AE01AEADC6800376D9D /* ios_receipt_scan_exampleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A6FD5ADB1AEADC6800376D9D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A6FD5ABF1AEADC6800376D9D /* ios-receipt-scan-example */;
+			targetProxy = A6FD5ADA1AEADC6800376D9D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A6FD5ACD1AEADC6800376D9D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A6FD5ACE1AEADC6800376D9D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A6FD5AD21AEADC6800376D9D /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A6FD5AD31AEADC6800376D9D /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A6FD5AE11AEADC6800376D9D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A6FD5AE21AEADC6800376D9D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A6FD5AE41AEADC6800376D9D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "ios-receipt-scan-example/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A6FD5AE51AEADC6800376D9D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "ios-receipt-scan-example/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		A6FD5AE71AEADC6800376D9D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "ios-receipt-scan-exampleTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ios-receipt-scan-example.app/ios-receipt-scan-example";
+			};
+			name = Debug;
+		};
+		A6FD5AE81AEADC6800376D9D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "ios-receipt-scan-exampleTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ios-receipt-scan-example.app/ios-receipt-scan-example";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A6FD5ABB1AEADC6800376D9D /* Build configuration list for PBXProject "ios-receipt-scan-example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A6FD5AE11AEADC6800376D9D /* Debug */,
+				A6FD5AE21AEADC6800376D9D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A6FD5AE31AEADC6800376D9D /* Build configuration list for PBXNativeTarget "ios-receipt-scan-example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A6FD5AE41AEADC6800376D9D /* Debug */,
+				A6FD5AE51AEADC6800376D9D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A6FD5AE61AEADC6800376D9D /* Build configuration list for PBXNativeTarget "ios-receipt-scan-exampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A6FD5AE71AEADC6800376D9D /* Debug */,
+				A6FD5AE81AEADC6800376D9D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A6FD5AB81AEADC6800376D9D /* Project object */;
+}
