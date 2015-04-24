@@ -15,11 +15,54 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ro9-7g-3Te">
+                                <rect key="frame" x="267" y="514" width="66" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="aIF-PP-MtD"/>
+                                    <constraint firstAttribute="width" constant="66" id="c4g-ir-qh7"/>
+                                </constraints>
+                                <state key="normal" image="snapStillButton">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchUpSnapStillImageButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="QkS-Sy-tsB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <constraints>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Ro9-7g-3Te" secondAttribute="bottom" constant="20" id="2UO-jZ-zsR"/>
+                            <constraint firstAttribute="centerX" secondItem="Ro9-7g-3Te" secondAttribute="centerX" id="b2y-o9-vHL"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <segue destination="Qdc-M4-Yab" kind="presentation" identifier="CameraToTesseractSegue" id="vVE-8O-m6T"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
+        <!--Tesseract Recognition View Controller-->
+        <scene sceneID="3n3-gW-8uw">
+            <objects>
+                <viewController id="Qdc-M4-Yab" customClass="NFNTesseractRecognitionViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="E4f-Rm-ejb"/>
+                        <viewControllerLayoutGuide type="bottom" id="8sf-0M-B2Y"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CIK-xu-0kh">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RIk-rV-a0a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1142" y="378"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="snapStillButton" width="66" height="66"/>
+    </resources>
 </document>

@@ -16,6 +16,8 @@
 @property (nonatomic, strong) AVCaptureStillImageOutput* stillImageOutput;
 @property (nonatomic, assign) BOOL forceStop;
 
+@property (nonatomic, strong) UIImage *imageTaken;
+
 @end
 
 @implementation NFNCameraRectDetectionViewController
@@ -46,7 +48,6 @@
 -(void)viewDidLoad
 {
     [self setupCameraView];
-    [self createUI];
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -77,6 +78,15 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([segue.identifier isEqualToString:@"CameraToTesseractSegue"])
+    {
+        NFNTesseractRecognitionViewController *vc = segue.destinationViewController;
+        vc.image = self.imageTaken;
+    }
+}
+
 - (void)createGLKView
 {
     if (self.context) return;
@@ -96,60 +106,12 @@
     [EAGLContext setCurrentContext:self.context];
 }
 
--(void) createUI
-{
-    
-    //Add LDCFoundationCameraFooterView
-//    CGRect cameraFooterRect = CGRectMake(
-//                                         self.view.frame.origin.x,
-//                                         self.view.frame.size.height - FOOTER_DEFAULT_HEIGHT,
-//                                         self.view.frame.size.width,
-//                                         FOOTER_DEFAULT_HEIGHT
-//                                         );
-//    LDCFoundationCameraFooterView* footerView = [[LDCFoundationCameraFooterView alloc] initWithFrame:cameraFooterRect];
-//    
-//    
-//    footerView.backgroundColor = [UIColor colorWithRed:0.15 green:0.15 blue:0.15 alpha:1.0];
-//    
-//    CGSize snapStillImageCaptureButtonSize = CGSizeMake(100, 96);
-//    CGRect snapStillImageCaptureButtonRect = CGRectMake(
-//                                                        (footerView.frame.size.width  - snapStillImageCaptureButtonSize.width ) / 2,
-//                                                        footerView.frame.size.height - snapStillImageCaptureButtonSize.height - 10,
-//                                                        snapStillImageCaptureButtonSize.width,
-//                                                        snapStillImageCaptureButtonSize.height);
-//    
-//    UIButton *snapStillImageCaptureButton = [[UIButton alloc] initWithFrame:snapStillImageCaptureButtonRect];
-//    [snapStillImageCaptureButton setImage:[UIImage imageNamed:@"btnFotografarNotinha.png"] forState:UIControlStateNormal];
-//    
-//    [snapStillImageCaptureButton addTarget:self action:@selector(snapStillImageCameraHandler) forControlEvents:UIControlEventTouchUpInside];
-//    
-//    [footerView addSubview:snapStillImageCaptureButton];
-//    
-//    
-//    [self.view addSubview:footerView];
-//    
-//    //Creating Close Button
-//    UIButton *btnClose = [[UIButton alloc] initWithFrame:CGRectMake(0, 10, 56, 56)];
-//    [btnClose setImage:[UIImage imageNamed:@"btn_close.png"] forState:UIControlStateNormal];
-//    [btnClose addTarget:self action:@selector(btnCloseHandler) forControlEvents:UIControlEventTouchUpInside];
-//    [self.view addSubview:btnClose];
-}
-
-
--(UIStatusBarStyle)preferredStatusBarStyle{
-    return UIStatusBarStyleLightContent;
-}
-
-
--(void) snapStillImageCameraHandler
-{
+- (IBAction)touchUpSnapStillImageButton:(id)sender {
     [self captureImageWithCompletionHander:^(id data) {
         UIImage *image = ([data isKindOfClass:[NSData class]]) ? [UIImage imageWithData:data] : data;
-// TODO MEXER AQUI
-//        if([self.delegate respondsToSelector:@selector(snapStillImageHasBeenTaken:)])
-//        {
-//            [self.delegate snapStillImageHasBeenTaken:image];
-//        }
+        self.imageTaken = image;
+        
+        [self performSegueWithIdentifier:@"CameraToTesseractSegue" sender:self];
     }];
 }
 

@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Paulo Miguel Almeida Rodenas. All rights reserved.
 //
 
-//Libraries
+// Libraries
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
 #import <CoreMedia/CoreMedia.h>
@@ -14,6 +14,9 @@
 #import <CoreImage/CoreImage.h>
 #import <ImageIO/ImageIO.h>
 #import <GLKit/GLKit.h>
+
+// View Controllers
+#import "NFNTesseractRecognitionViewController.h"
 
 @interface NFNCameraRectDetectionViewController : UIViewController<AVCaptureVideoDataOutputSampleBufferDelegate>
 

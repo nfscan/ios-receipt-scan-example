@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8059B066CEAED1792510BBB3 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E04B423EBDF4C8FBB493F8FD /* libPods.a */; };
+		A633C5F31AEAEF3000643BA7 /* NFNTesseractImageRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = A633C5F21AEAEF3000643BA7 /* NFNTesseractImageRecognizer.m */; };
 		A6D628AA1AEAE16E00DE2002 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = A6D628A91AEAE16E00DE2002 /* tessdata */; };
-		A6D628AC1AEAE1C200DE2002 /* TesseractOCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6D628AB1AEAE1C200DE2002 /* TesseractOCR.framework */; };
+		A6D628AF1AEAEB2E00DE2002 /* NFNTesseractRecognitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D628AE1AEAEB2E00DE2002 /* NFNTesseractRecognitionViewController.m */; };
 		A6FD5AC61AEADC6800376D9D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A6FD5AC51AEADC6800376D9D /* main.m */; };
 		A6FD5AC91AEADC6800376D9D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A6FD5AC81AEADC6800376D9D /* AppDelegate.m */; };
 		A6FD5ACF1AEADC6800376D9D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6FD5ACD1AEADC6800376D9D /* Main.storyboard */; };
@@ -36,8 +38,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6E8C5D81E34EC3CF893C6154 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		7A25210034ABDA72C1EEF4C9 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		A633C5F11AEAEF3000643BA7 /* NFNTesseractImageRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NFNTesseractImageRecognizer.h; sourceTree = "<group>"; };
+		A633C5F21AEAEF3000643BA7 /* NFNTesseractImageRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NFNTesseractImageRecognizer.m; sourceTree = "<group>"; };
 		A6D628A91AEAE16E00DE2002 /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
-		A6D628AB1AEAE1C200DE2002 /* TesseractOCR.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TesseractOCR.framework; sourceTree = "<group>"; };
+		A6D628AD1AEAEB2E00DE2002 /* NFNTesseractRecognitionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NFNTesseractRecognitionViewController.h; sourceTree = "<group>"; };
+		A6D628AE1AEAEB2E00DE2002 /* NFNTesseractRecognitionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NFNTesseractRecognitionViewController.m; sourceTree = "<group>"; };
 		A6FD5AC01AEADC6800376D9D /* ios-receipt-scan-example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-receipt-scan-example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6FD5AC41AEADC6800376D9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A6FD5AC51AEADC6800376D9D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -58,6 +65,7 @@
 		A6FD5AF41AEADD2600376D9D /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		A6FD5AF61AEADD3A00376D9D /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		A6FD5AF81AEADD4E00376D9D /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		E04B423EBDF4C8FBB493F8FD /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,10 +77,10 @@
 				A6FD5AF71AEADD3A00376D9D /* ImageIO.framework in Frameworks */,
 				A6FD5AF51AEADD2600376D9D /* CoreImage.framework in Frameworks */,
 				A6FD5AF31AEADD1B00376D9D /* CoreVideo.framework in Frameworks */,
-				A6D628AC1AEAE1C200DE2002 /* TesseractOCR.framework in Frameworks */,
 				A6FD5AF11AEADD1300376D9D /* CoreMedia.framework in Frameworks */,
 				A6FD5AEF1AEADD0B00376D9D /* AVFoundation.framework in Frameworks */,
 				A6FD5AED1AEADD0500376D9D /* UIKit.framework in Frameworks */,
+				8059B066CEAED1792510BBB3 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +101,7 @@
 				A6FD5AC21AEADC6800376D9D /* ios-receipt-scan-example */,
 				A6FD5ADC1AEADC6800376D9D /* ios-receipt-scan-exampleTests */,
 				A6FD5AC11AEADC6800376D9D /* Products */,
+				B73D4F906D85200AA26A488A /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -117,6 +126,10 @@
 				A6FD5AC31AEADC6800376D9D /* Supporting Files */,
 				A6FD5AE91AEADCE300376D9D /* NFNCameraRectDetectionViewController.h */,
 				A6FD5AEA1AEADCE300376D9D /* NFNCameraRectDetectionViewController.m */,
+				A6D628AD1AEAEB2E00DE2002 /* NFNTesseractRecognitionViewController.h */,
+				A6D628AE1AEAEB2E00DE2002 /* NFNTesseractRecognitionViewController.m */,
+				A633C5F11AEAEF3000643BA7 /* NFNTesseractImageRecognizer.h */,
+				A633C5F21AEAEF3000643BA7 /* NFNTesseractImageRecognizer.m */,
 			);
 			path = "ios-receipt-scan-example";
 			sourceTree = "<group>";
@@ -150,7 +163,6 @@
 		A6FD5AFA1AEADD6100376D9D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A6D628AB1AEAE1C200DE2002 /* TesseractOCR.framework */,
 				A6FD5AF81AEADD4E00376D9D /* GLKit.framework */,
 				A6FD5AF61AEADD3A00376D9D /* ImageIO.framework */,
 				A6FD5AF41AEADD2600376D9D /* CoreImage.framework */,
@@ -158,8 +170,18 @@
 				A6FD5AF01AEADD1300376D9D /* CoreMedia.framework */,
 				A6FD5AEE1AEADD0B00376D9D /* AVFoundation.framework */,
 				A6FD5AEC1AEADD0500376D9D /* UIKit.framework */,
+				E04B423EBDF4C8FBB493F8FD /* libPods.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B73D4F906D85200AA26A488A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7A25210034ABDA72C1EEF4C9 /* Pods.debug.xcconfig */,
+				6E8C5D81E34EC3CF893C6154 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,9 +191,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A6FD5AE31AEADC6800376D9D /* Build configuration list for PBXNativeTarget "ios-receipt-scan-example" */;
 			buildPhases = (
+				41DC960DAD0A7E2479E251CA /* Check Pods Manifest.lock */,
 				A6FD5ABC1AEADC6800376D9D /* Sources */,
 				A6FD5ABD1AEADC6800376D9D /* Frameworks */,
 				A6FD5ABE1AEADC6800376D9D /* Resources */,
+				04710DD0DFF984E0C8A453AD /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -258,13 +282,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		04710DD0DFF984E0C8A453AD /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		41DC960DAD0A7E2479E251CA /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A6FD5ABC1AEADC6800376D9D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				A6FD5AC91AEADC6800376D9D /* AppDelegate.m in Sources */,
+				A633C5F31AEAEF3000643BA7 /* NFNTesseractImageRecognizer.m in Sources */,
 				A6FD5AC61AEADC6800376D9D /* main.m in Sources */,
+				A6D628AF1AEAEB2E00DE2002 /* NFNTesseractRecognitionViewController.m in Sources */,
 				A6FD5AEB1AEADCE300376D9D /* NFNCameraRectDetectionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -385,6 +444,7 @@
 		};
 		A6FD5AE41AEADC6800376D9D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A25210034ABDA72C1EEF4C9 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -394,11 +454,13 @@
 				INFOPLIST_FILE = "ios-receipt-scan-example/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		A6FD5AE51AEADC6800376D9D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E8C5D81E34EC3CF893C6154 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -408,6 +470,7 @@
 				INFOPLIST_FILE = "ios-receipt-scan-example/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
