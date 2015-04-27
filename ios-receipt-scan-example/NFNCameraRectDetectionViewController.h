@@ -14,6 +14,7 @@
 #import <CoreImage/CoreImage.h>
 #import <ImageIO/ImageIO.h>
 #import <GLKit/GLKit.h>
+#import <GLKit/GLKit.h>
 
 // View Controllers
 #import "NFNTesseractRecognitionViewController.h"
