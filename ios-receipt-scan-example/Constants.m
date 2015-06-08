@@ -49,8 +49,7 @@
 #ifdef DEBUG
             NSLog(@"%s BASE_URL ENVIRONMENTAL VARIABLES ISN'T SET",__PRETTY_FUNCTION__);
 #endif
-//            baseUrl = @"http://172.168.101.3:8080/nfscan-server/";
-            baseUrl = @"https://api.nfscan.cc/";
+            baseUrl = @"http://youripaddress:8080/nfscan-server/";
         }
     });
     return baseUrl;
