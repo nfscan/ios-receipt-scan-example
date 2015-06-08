@@ -8,9 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		8059B066CEAED1792510BBB3 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E04B423EBDF4C8FBB493F8FD /* libPods.a */; };
-		A633C5F31AEAEF3000643BA7 /* NFNTesseractImageRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = A633C5F21AEAEF3000643BA7 /* NFNTesseractImageRecognizer.m */; };
-		A6D628AA1AEAE16E00DE2002 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = A6D628A91AEAE16E00DE2002 /* tessdata */; };
-		A6D628AF1AEAEB2E00DE2002 /* NFNTesseractRecognitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D628AE1AEAEB2E00DE2002 /* NFNTesseractRecognitionViewController.m */; };
+		A6D628AF1AEAEB2E00DE2002 /* NFNReceiptRecognitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D628AE1AEAEB2E00DE2002 /* NFNReceiptRecognitionViewController.m */; };
+		A6E166151B261BFF001CDBC8 /* NFNOCRService.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E166141B261BFF001CDBC8 /* NFNOCRService.m */; };
+		A6E166191B261CC9001CDBC8 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E166181B261CC9001CDBC8 /* Reachability.m */; };
+		A6E1661C1B261CD9001CDBC8 /* NetworkAvailabilityUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E1661B1B261CD9001CDBC8 /* NetworkAvailabilityUtils.m */; };
+		A6E1662D1B261DAE001CDBC8 /* PassCode.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E166271B261DAE001CDBC8 /* PassCode.m */; };
+		A6E1662F1B261DAE001CDBC8 /* CounterSignCode.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E1662B1B261DAE001CDBC8 /* CounterSignCode.m */; };
+		A6E166321B261EA2001CDBC8 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E166311B261EA2001CDBC8 /* Constants.m */; };
+		A6E166361B2623D0001CDBC8 /* UIImage+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E166351B2623D0001CDBC8 /* UIImage+Common.m */; };
+		A6E1663A1B2624B8001CDBC8 /* TaxReceipt.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E166391B2624B8001CDBC8 /* TaxReceipt.m */; };
 		A6FD5AC61AEADC6800376D9D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A6FD5AC51AEADC6800376D9D /* main.m */; };
 		A6FD5AC91AEADC6800376D9D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A6FD5AC81AEADC6800376D9D /* AppDelegate.m */; };
 		A6FD5ACF1AEADC6800376D9D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6FD5ACD1AEADC6800376D9D /* Main.storyboard */; };
@@ -40,11 +46,24 @@
 /* Begin PBXFileReference section */
 		6E8C5D81E34EC3CF893C6154 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		7A25210034ABDA72C1EEF4C9 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		A633C5F11AEAEF3000643BA7 /* NFNTesseractImageRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NFNTesseractImageRecognizer.h; sourceTree = "<group>"; };
-		A633C5F21AEAEF3000643BA7 /* NFNTesseractImageRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NFNTesseractImageRecognizer.m; sourceTree = "<group>"; };
-		A6D628A91AEAE16E00DE2002 /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
-		A6D628AD1AEAEB2E00DE2002 /* NFNTesseractRecognitionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NFNTesseractRecognitionViewController.h; sourceTree = "<group>"; };
-		A6D628AE1AEAEB2E00DE2002 /* NFNTesseractRecognitionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NFNTesseractRecognitionViewController.m; sourceTree = "<group>"; };
+		A6D628AD1AEAEB2E00DE2002 /* NFNReceiptRecognitionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NFNReceiptRecognitionViewController.h; sourceTree = "<group>"; };
+		A6D628AE1AEAEB2E00DE2002 /* NFNReceiptRecognitionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NFNReceiptRecognitionViewController.m; sourceTree = "<group>"; };
+		A6E166131B261BFF001CDBC8 /* NFNOCRService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NFNOCRService.h; sourceTree = "<group>"; };
+		A6E166141B261BFF001CDBC8 /* NFNOCRService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NFNOCRService.m; sourceTree = "<group>"; };
+		A6E166171B261CC9001CDBC8 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		A6E166181B261CC9001CDBC8 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		A6E1661A1B261CD9001CDBC8 /* NetworkAvailabilityUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkAvailabilityUtils.h; sourceTree = "<group>"; };
+		A6E1661B1B261CD9001CDBC8 /* NetworkAvailabilityUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkAvailabilityUtils.m; sourceTree = "<group>"; };
+		A6E166261B261DAE001CDBC8 /* PassCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PassCode.h; sourceTree = "<group>"; };
+		A6E166271B261DAE001CDBC8 /* PassCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PassCode.m; sourceTree = "<group>"; };
+		A6E1662A1B261DAE001CDBC8 /* CounterSignCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CounterSignCode.h; sourceTree = "<group>"; };
+		A6E1662B1B261DAE001CDBC8 /* CounterSignCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CounterSignCode.m; sourceTree = "<group>"; };
+		A6E166301B261EA2001CDBC8 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		A6E166311B261EA2001CDBC8 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		A6E166341B2623D0001CDBC8 /* UIImage+Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Common.h"; sourceTree = "<group>"; };
+		A6E166351B2623D0001CDBC8 /* UIImage+Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Common.m"; sourceTree = "<group>"; };
+		A6E166381B2624B8001CDBC8 /* TaxReceipt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaxReceipt.h; sourceTree = "<group>"; };
+		A6E166391B2624B8001CDBC8 /* TaxReceipt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaxReceipt.m; sourceTree = "<group>"; };
 		A6FD5AC01AEADC6800376D9D /* ios-receipt-scan-example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-receipt-scan-example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6FD5AC41AEADC6800376D9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A6FD5AC51AEADC6800376D9D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -94,6 +113,77 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A6E166101B261B93001CDBC8 /* delegates */ = {
+			isa = PBXGroup;
+			children = (
+				A6FD5AC71AEADC6800376D9D /* AppDelegate.h */,
+				A6FD5AC81AEADC6800376D9D /* AppDelegate.m */,
+			);
+			name = delegates;
+			sourceTree = "<group>";
+		};
+		A6E166111B261B9D001CDBC8 /* viewcontrollers */ = {
+			isa = PBXGroup;
+			children = (
+				A6FD5AE91AEADCE300376D9D /* NFNCameraRectDetectionViewController.h */,
+				A6FD5AEA1AEADCE300376D9D /* NFNCameraRectDetectionViewController.m */,
+				A6D628AD1AEAEB2E00DE2002 /* NFNReceiptRecognitionViewController.h */,
+				A6D628AE1AEAEB2E00DE2002 /* NFNReceiptRecognitionViewController.m */,
+			);
+			name = viewcontrollers;
+			sourceTree = "<group>";
+		};
+		A6E166121B261BA3001CDBC8 /* services */ = {
+			isa = PBXGroup;
+			children = (
+				A6E166131B261BFF001CDBC8 /* NFNOCRService.h */,
+				A6E166141B261BFF001CDBC8 /* NFNOCRService.m */,
+			);
+			name = services;
+			sourceTree = "<group>";
+		};
+		A6E166161B261CB3001CDBC8 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				A6E166301B261EA2001CDBC8 /* Constants.h */,
+				A6E166311B261EA2001CDBC8 /* Constants.m */,
+				A6E1661A1B261CD9001CDBC8 /* NetworkAvailabilityUtils.h */,
+				A6E1661B1B261CD9001CDBC8 /* NetworkAvailabilityUtils.m */,
+				A6E166171B261CC9001CDBC8 /* Reachability.h */,
+				A6E166181B261CC9001CDBC8 /* Reachability.m */,
+			);
+			name = utils;
+			sourceTree = "<group>";
+		};
+		A6E1661D1B261D69001CDBC8 /* security */ = {
+			isa = PBXGroup;
+			children = (
+				A6E166261B261DAE001CDBC8 /* PassCode.h */,
+				A6E166271B261DAE001CDBC8 /* PassCode.m */,
+				A6E1662A1B261DAE001CDBC8 /* CounterSignCode.h */,
+				A6E1662B1B261DAE001CDBC8 /* CounterSignCode.m */,
+			);
+			name = security;
+			sourceTree = "<group>";
+		};
+		A6E166331B2623C6001CDBC8 /* categories */ = {
+			isa = PBXGroup;
+			children = (
+				A6E166341B2623D0001CDBC8 /* UIImage+Common.h */,
+				A6E166351B2623D0001CDBC8 /* UIImage+Common.m */,
+			);
+			name = categories;
+			sourceTree = "<group>";
+		};
+		A6E166371B2624AE001CDBC8 /* bean */ = {
+			isa = PBXGroup;
+			children = (
+				A6E166381B2624B8001CDBC8 /* TaxReceipt.h */,
+				A6E166391B2624B8001CDBC8 /* TaxReceipt.m */,
+			);
+			name = bean;
+			sourceTree = "<group>";
+		};
 		A6FD5AB71AEADC6800376D9D = {
 			isa = PBXGroup;
 			children = (
@@ -117,19 +207,17 @@
 		A6FD5AC21AEADC6800376D9D /* ios-receipt-scan-example */ = {
 			isa = PBXGroup;
 			children = (
-				A6D628A91AEAE16E00DE2002 /* tessdata */,
-				A6FD5AC71AEADC6800376D9D /* AppDelegate.h */,
-				A6FD5AC81AEADC6800376D9D /* AppDelegate.m */,
+				A6E166101B261B93001CDBC8 /* delegates */,
+				A6E166331B2623C6001CDBC8 /* categories */,
+				A6E166371B2624AE001CDBC8 /* bean */,
+				A6E166111B261B9D001CDBC8 /* viewcontrollers */,
+				A6E166121B261BA3001CDBC8 /* services */,
+				A6E166161B261CB3001CDBC8 /* utils */,
+				A6E1661D1B261D69001CDBC8 /* security */,
 				A6FD5ACD1AEADC6800376D9D /* Main.storyboard */,
 				A6FD5AD01AEADC6800376D9D /* Images.xcassets */,
 				A6FD5AD21AEADC6800376D9D /* LaunchScreen.xib */,
 				A6FD5AC31AEADC6800376D9D /* Supporting Files */,
-				A6FD5AE91AEADCE300376D9D /* NFNCameraRectDetectionViewController.h */,
-				A6FD5AEA1AEADCE300376D9D /* NFNCameraRectDetectionViewController.m */,
-				A6D628AD1AEAEB2E00DE2002 /* NFNTesseractRecognitionViewController.h */,
-				A6D628AE1AEAEB2E00DE2002 /* NFNTesseractRecognitionViewController.m */,
-				A633C5F11AEAEF3000643BA7 /* NFNTesseractImageRecognizer.h */,
-				A633C5F21AEAEF3000643BA7 /* NFNTesseractImageRecognizer.m */,
 			);
 			path = "ios-receipt-scan-example";
 			sourceTree = "<group>";
@@ -267,7 +355,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A6FD5ACF1AEADC6800376D9D /* Main.storyboard in Resources */,
-				A6D628AA1AEAE16E00DE2002 /* tessdata in Resources */,
 				A6FD5AD41AEADC6800376D9D /* LaunchScreen.xib in Resources */,
 				A6FD5AD11AEADC6800376D9D /* Images.xcassets in Resources */,
 			);
@@ -320,11 +407,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6E166151B261BFF001CDBC8 /* NFNOCRService.m in Sources */,
 				A6FD5AC91AEADC6800376D9D /* AppDelegate.m in Sources */,
-				A633C5F31AEAEF3000643BA7 /* NFNTesseractImageRecognizer.m in Sources */,
 				A6FD5AC61AEADC6800376D9D /* main.m in Sources */,
-				A6D628AF1AEAEB2E00DE2002 /* NFNTesseractRecognitionViewController.m in Sources */,
+				A6E1662F1B261DAE001CDBC8 /* CounterSignCode.m in Sources */,
+				A6E1663A1B2624B8001CDBC8 /* TaxReceipt.m in Sources */,
+				A6D628AF1AEAEB2E00DE2002 /* NFNReceiptRecognitionViewController.m in Sources */,
+				A6E166191B261CC9001CDBC8 /* Reachability.m in Sources */,
+				A6E1661C1B261CD9001CDBC8 /* NetworkAvailabilityUtils.m in Sources */,
+				A6E166361B2623D0001CDBC8 /* UIImage+Common.m in Sources */,
+				A6E1662D1B261DAE001CDBC8 /* PassCode.m in Sources */,
 				A6FD5AEB1AEADCE300376D9D /* NFNCameraRectDetectionViewController.m in Sources */,
+				A6E166321B261EA2001CDBC8 /* Constants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
