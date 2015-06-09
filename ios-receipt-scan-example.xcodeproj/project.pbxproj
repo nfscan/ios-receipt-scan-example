@@ -17,6 +17,12 @@
 		A6E166321B261EA2001CDBC8 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E166311B261EA2001CDBC8 /* Constants.m */; };
 		A6E166361B2623D0001CDBC8 /* UIImage+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E166351B2623D0001CDBC8 /* UIImage+Common.m */; };
 		A6E1663A1B2624B8001CDBC8 /* TaxReceipt.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E166391B2624B8001CDBC8 /* TaxReceipt.m */; };
+		A6E1D3B51B274F740004FF48 /* CNPJFormatterTextFieldDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E1D3AE1B274F740004FF48 /* CNPJFormatterTextFieldDelegate.m */; };
+		A6E1D3B61B274F740004FF48 /* DateFormatterTextFieldDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E1D3B01B274F740004FF48 /* DateFormatterTextFieldDelegate.m */; };
+		A6E1D3B71B274F740004FF48 /* CurrencyFormatterTextFieldDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E1D3B21B274F740004FF48 /* CurrencyFormatterTextFieldDelegate.m */; };
+		A6E1D3B81B274F740004FF48 /* COOFormatterTextFieldDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E1D3B41B274F740004FF48 /* COOFormatterTextFieldDelegate.m */; };
+		A6E3171C1B27604700414C9C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6E3171B1B27604700414C9C /* QuartzCore.framework */; };
+		A6E3171F1B27665600414C9C /* NSString+Numeric.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E3171E1B27665600414C9C /* NSString+Numeric.m */; };
 		A6FD5AC61AEADC6800376D9D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A6FD5AC51AEADC6800376D9D /* main.m */; };
 		A6FD5AC91AEADC6800376D9D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A6FD5AC81AEADC6800376D9D /* AppDelegate.m */; };
 		A6FD5ACF1AEADC6800376D9D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6FD5ACD1AEADC6800376D9D /* Main.storyboard */; };
@@ -64,6 +70,17 @@
 		A6E166351B2623D0001CDBC8 /* UIImage+Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Common.m"; sourceTree = "<group>"; };
 		A6E166381B2624B8001CDBC8 /* TaxReceipt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaxReceipt.h; sourceTree = "<group>"; };
 		A6E166391B2624B8001CDBC8 /* TaxReceipt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaxReceipt.m; sourceTree = "<group>"; };
+		A6E1D3AD1B274F740004FF48 /* CNPJFormatterTextFieldDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNPJFormatterTextFieldDelegate.h; sourceTree = "<group>"; };
+		A6E1D3AE1B274F740004FF48 /* CNPJFormatterTextFieldDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNPJFormatterTextFieldDelegate.m; sourceTree = "<group>"; };
+		A6E1D3AF1B274F740004FF48 /* DateFormatterTextFieldDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateFormatterTextFieldDelegate.h; sourceTree = "<group>"; };
+		A6E1D3B01B274F740004FF48 /* DateFormatterTextFieldDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateFormatterTextFieldDelegate.m; sourceTree = "<group>"; };
+		A6E1D3B11B274F740004FF48 /* CurrencyFormatterTextFieldDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrencyFormatterTextFieldDelegate.h; sourceTree = "<group>"; };
+		A6E1D3B21B274F740004FF48 /* CurrencyFormatterTextFieldDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrencyFormatterTextFieldDelegate.m; sourceTree = "<group>"; };
+		A6E1D3B31B274F740004FF48 /* COOFormatterTextFieldDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COOFormatterTextFieldDelegate.h; sourceTree = "<group>"; };
+		A6E1D3B41B274F740004FF48 /* COOFormatterTextFieldDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COOFormatterTextFieldDelegate.m; sourceTree = "<group>"; };
+		A6E3171B1B27604700414C9C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		A6E3171D1B27665600414C9C /* NSString+Numeric.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Numeric.h"; sourceTree = "<group>"; };
+		A6E3171E1B27665600414C9C /* NSString+Numeric.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Numeric.m"; sourceTree = "<group>"; };
 		A6FD5AC01AEADC6800376D9D /* ios-receipt-scan-example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-receipt-scan-example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6FD5AC41AEADC6800376D9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A6FD5AC51AEADC6800376D9D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -92,6 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6E3171C1B27604700414C9C /* QuartzCore.framework in Frameworks */,
 				A6FD5AF91AEADD4E00376D9D /* GLKit.framework in Frameworks */,
 				A6FD5AF71AEADD3A00376D9D /* ImageIO.framework in Frameworks */,
 				A6FD5AF51AEADD2600376D9D /* CoreImage.framework in Frameworks */,
@@ -118,6 +136,14 @@
 			children = (
 				A6FD5AC71AEADC6800376D9D /* AppDelegate.h */,
 				A6FD5AC81AEADC6800376D9D /* AppDelegate.m */,
+				A6E1D3AD1B274F740004FF48 /* CNPJFormatterTextFieldDelegate.h */,
+				A6E1D3AE1B274F740004FF48 /* CNPJFormatterTextFieldDelegate.m */,
+				A6E1D3AF1B274F740004FF48 /* DateFormatterTextFieldDelegate.h */,
+				A6E1D3B01B274F740004FF48 /* DateFormatterTextFieldDelegate.m */,
+				A6E1D3B11B274F740004FF48 /* CurrencyFormatterTextFieldDelegate.h */,
+				A6E1D3B21B274F740004FF48 /* CurrencyFormatterTextFieldDelegate.m */,
+				A6E1D3B31B274F740004FF48 /* COOFormatterTextFieldDelegate.h */,
+				A6E1D3B41B274F740004FF48 /* COOFormatterTextFieldDelegate.m */,
 			);
 			name = delegates;
 			sourceTree = "<group>";
@@ -169,6 +195,8 @@
 		A6E166331B2623C6001CDBC8 /* categories */ = {
 			isa = PBXGroup;
 			children = (
+				A6E3171D1B27665600414C9C /* NSString+Numeric.h */,
+				A6E3171E1B27665600414C9C /* NSString+Numeric.m */,
 				A6E166341B2623D0001CDBC8 /* UIImage+Common.h */,
 				A6E166351B2623D0001CDBC8 /* UIImage+Common.m */,
 			);
@@ -251,6 +279,7 @@
 		A6FD5AFA1AEADD6100376D9D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A6E3171B1B27604700414C9C /* QuartzCore.framework */,
 				A6FD5AF81AEADD4E00376D9D /* GLKit.framework */,
 				A6FD5AF61AEADD3A00376D9D /* ImageIO.framework */,
 				A6FD5AF41AEADD2600376D9D /* CoreImage.framework */,
@@ -410,11 +439,16 @@
 				A6E166151B261BFF001CDBC8 /* NFNOCRService.m in Sources */,
 				A6FD5AC91AEADC6800376D9D /* AppDelegate.m in Sources */,
 				A6FD5AC61AEADC6800376D9D /* main.m in Sources */,
+				A6E1D3B81B274F740004FF48 /* COOFormatterTextFieldDelegate.m in Sources */,
+				A6E1D3B71B274F740004FF48 /* CurrencyFormatterTextFieldDelegate.m in Sources */,
 				A6E1662F1B261DAE001CDBC8 /* CounterSignCode.m in Sources */,
 				A6E1663A1B2624B8001CDBC8 /* TaxReceipt.m in Sources */,
 				A6D628AF1AEAEB2E00DE2002 /* NFNReceiptRecognitionViewController.m in Sources */,
 				A6E166191B261CC9001CDBC8 /* Reachability.m in Sources */,
 				A6E1661C1B261CD9001CDBC8 /* NetworkAvailabilityUtils.m in Sources */,
+				A6E1D3B61B274F740004FF48 /* DateFormatterTextFieldDelegate.m in Sources */,
+				A6E3171F1B27665600414C9C /* NSString+Numeric.m in Sources */,
+				A6E1D3B51B274F740004FF48 /* CNPJFormatterTextFieldDelegate.m in Sources */,
 				A6E166361B2623D0001CDBC8 /* UIImage+Common.m in Sources */,
 				A6E1662D1B261DAE001CDBC8 /* PassCode.m in Sources */,
 				A6FD5AEB1AEADCE300376D9D /* NFNCameraRectDetectionViewController.m in Sources */,

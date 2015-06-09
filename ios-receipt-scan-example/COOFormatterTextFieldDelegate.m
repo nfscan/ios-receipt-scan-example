@@ -1,5 +1,5 @@
 //
-//  NFNReceiptRecognitionViewController.h
+//  COOFormatterTextFieldDelegate.m
 //  ios-receipt-scan-example
 //
 //  Version 0.0.1
@@ -31,28 +31,39 @@
 //  THE SOFTWARE.
 //
 
-// Libraries
-#import <UIKit/UIKit.h>
-#import <MBProgressHUD/MBProgressHUD.h>
-
-// Security
-#import "PassCode.h"
-#import "CounterSignCode.h"
-
-// Services
-#import "NFNOCRService.h"
-
-// Categories
-#import "NSString+Numeric.h"
-
-// Delegates
-#import "CNPJFormatterTextFieldDelegate.h"
-#import "DateFormatterTextFieldDelegate.h"
-#import "CurrencyFormatterTextFieldDelegate.h"
 #import "COOFormatterTextFieldDelegate.h"
 
-@interface NFNReceiptRecognitionViewController : UIViewController<NFNOCRServiceDelegate>
+@implementation COOFormatterTextFieldDelegate
 
-@property (strong, nonatomic) UIImage* image;
+-(void)reformat:(UITextField *)textField
+{
+    
+    if ([textField.text isEqualToString:@""]) {
+        textField.layer.cornerRadius=6.0f;
+        textField.layer.masksToBounds=YES;
+        textField.layer.borderColor=[[UIColor redColor]CGColor];
+        textField.layer.borderWidth= 1.0f;
+        
+        textField.textColor = [UIColor redColor];
+    }
+    else
+    {
+        textField.textColor = [UIColor blackColor];
+        textField.layer.borderColor=[[UIColor clearColor]CGColor];
+    }
+    
+}
+
+
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+    // Prevent crashing undo bug – see note below.
+    if(range.length + range.location > textField.text.length)
+    {
+        return NO;
+    }
+    
+    NSUInteger newLength = [textField.text length] + [string length] - range.length;
+    return newLength <= 6;
+}
 
 @end

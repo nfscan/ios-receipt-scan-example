@@ -1,6 +1,6 @@
 //
-//  NFNReceiptRecognitionViewController.h
-//  ios-receipt-scan-example
+//  NSString+Numeric.h
+//  IosBlurPanGestureExample
 //
 //  Version 0.0.1
 //
@@ -10,7 +10,7 @@
 //
 //  Get the latest version from here:
 //
-//  https://github.com/nfscan/ios-receipt-scan-example
+//  https://github.com/nfscan/ios-blur-pan-gesture
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -31,28 +31,10 @@
 //  THE SOFTWARE.
 //
 
-// Libraries
-#import <UIKit/UIKit.h>
-#import <MBProgressHUD/MBProgressHUD.h>
+#import <Foundation/Foundation.h>
 
-// Security
-#import "PassCode.h"
-#import "CounterSignCode.h"
+@interface NSString (Numeric)
 
-// Services
-#import "NFNOCRService.h"
-
-// Categories
-#import "NSString+Numeric.h"
-
-// Delegates
-#import "CNPJFormatterTextFieldDelegate.h"
-#import "DateFormatterTextFieldDelegate.h"
-#import "CurrencyFormatterTextFieldDelegate.h"
-#import "COOFormatterTextFieldDelegate.h"
-
-@interface NFNReceiptRecognitionViewController : UIViewController<NFNOCRServiceDelegate>
-
-@property (strong, nonatomic) UIImage* image;
+-(NSString*) removeNonNumeric;
 
 @end

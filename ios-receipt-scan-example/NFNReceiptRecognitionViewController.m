@@ -38,10 +38,18 @@
 // Components
 @property (weak, nonatomic) IBOutlet UIView *dataView;
 @property (weak, nonatomic) IBOutlet UIView *thankYouView;
-@property (weak, nonatomic) IBOutlet UILabel *cnpjLabel;
-@property (weak, nonatomic) IBOutlet UILabel *cooLabel;
-@property (weak, nonatomic) IBOutlet UILabel *dataLabel;
-@property (weak, nonatomic) IBOutlet UILabel *valorLabel;
+
+@property (weak, nonatomic) IBOutlet UITextField *cnpjTextField;
+@property (weak, nonatomic) IBOutlet UITextField *cooTextField;
+@property (weak, nonatomic) IBOutlet UITextField *dataTextField;
+@property (weak, nonatomic) IBOutlet UITextField *valorTextField;
+@property (weak, nonatomic) IBOutlet UIButton *donateButton;
+
+// Delegates
+@property (strong, nonatomic) CNPJFormatterTextFieldDelegate* cnpjFormatterDelegate;
+@property (strong, nonatomic) DateFormatterTextFieldDelegate* dateFormatterDelegate;
+@property (strong, nonatomic) CurrencyFormatterTextFieldDelegate* currencyFormatterTextFieldDelegate;
+@property (strong, nonatomic) COOFormatterTextFieldDelegate* cooFormatterTextFieldDelegate;
 
 // Http
 @property (strong, nonatomic) NFNOCRService* ocrService;
@@ -76,12 +84,33 @@
     
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     hud.mode = MBProgressHUDModeIndeterminate;
+    hud.labelText = @"Processando";
+    
+    // Setting delegates to each UITextField
+    self.cnpjFormatterDelegate = [[CNPJFormatterTextFieldDelegate alloc] init];
+    self.dateFormatterDelegate = [[DateFormatterTextFieldDelegate alloc] init];
+    self.currencyFormatterTextFieldDelegate = [[CurrencyFormatterTextFieldDelegate alloc] init];
+    self.cooFormatterTextFieldDelegate = [[COOFormatterTextFieldDelegate alloc] init];
+    self.cnpjTextField.delegate = self.cnpjFormatterDelegate;
+    self.dataTextField.delegate = self.dateFormatterDelegate;
+    self.valorTextField.delegate = self.currencyFormatterTextFieldDelegate;
+    self.cooTextField.delegate = self.cooFormatterTextFieldDelegate;
+    
+    // Add Targets for Form validation
+    [self.cnpjTextField  addTarget:self action:@selector(validateForm:) forControlEvents:UIControlEventEditingChanged];
+    [self.dataTextField  addTarget:self action:@selector(validateForm:) forControlEvents:UIControlEventEditingChanged];
+    [self.cooTextField   addTarget:self action:@selector(validateForm:) forControlEvents:UIControlEventEditingChanged];
+    [self.valorTextField addTarget:self action:@selector(validateForm:) forControlEvents:UIControlEventEditingChanged];
+
     
     [self.ocrService requestProcessAuth];
 }
 
 
 #pragma mark - Action methods
+- (IBAction)touchUpDataView:(id)sender {
+    [self.view endEditing:YES];
+}
 
 - (IBAction)cameraButtonHandler:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
@@ -155,10 +184,20 @@
             receipt.date = [dateFormatter dateFromString:[ocrTransactionJSON valueForKey:@"date"]] ;
             receipt.total = [[ocrTransactionJSON valueForKey:@"total"] doubleValue];
             
-            self.cnpjLabel.text = receipt.cnpj;
-            self.cooLabel.text = receipt.coo;
-            self.dataLabel.text = [dateFormatter stringFromDate:receipt.date];
-            self.valorLabel.text = [NSString stringWithFormat:@"%.2f", receipt.total];
+            self.cnpjTextField.text = receipt.cnpj;
+            self.cooTextField.text = receipt.coo;
+            self.dataTextField.text = [dateFormatter stringFromDate:receipt.date];
+            self.valorTextField.text = [NSString stringWithFormat:@"%.2f", receipt.total];
+            
+            // Formatting data for the first time since it doesn't fire a UIControlEventEditingChanged event
+            [self.cnpjFormatterDelegate reformat:self.cnpjTextField];
+            [self.dateFormatterDelegate reformat:self.dataTextField];
+            [self.cooFormatterTextFieldDelegate reformat:self.cooTextField];
+            [self.currencyFormatterTextFieldDelegate reformat:self.valorTextField];
+            
+            // Validate whether or not we enable the doneButton. It's useful for when all field are being recognized somehow.
+            [self commonValidateForm];
+
             
             self.receipt = receipt;
         }
@@ -176,6 +215,8 @@
 #ifdef DEBUG
     NSLog(@"%s",__PRETTY_FUNCTION__);
 #endif
+    
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
     
     NSString* alertMessage;
     
@@ -213,7 +254,7 @@
     NSLog(@"%s",__PRETTY_FUNCTION__);
 #endif
     self.numberOfProcessCheckDone += 1;
-    if (self.numberOfProcessCheckDone < 20) // 60 seconds
+    if (self.numberOfProcessCheckDone < 30) // 90 seconds
     {
         [self.ocrService requestProcessCheck:self.transactionId counterSignature:self.counterSignature];
     }
@@ -240,6 +281,48 @@
         
     }
 }
+
+-(void) validateForm:(UITextField *)textField
+{
+    if(textField == self.cnpjTextField )
+    {
+        [self.cnpjFormatterDelegate reformat:self.cnpjTextField];
+    }
+    else if(textField == self.dataTextField )
+    {
+        [self.dateFormatterDelegate reformat:self.dataTextField];
+    }
+    else if(textField == self.cooTextField )
+    {
+        [self.cooFormatterTextFieldDelegate reformat:self.cooTextField];
+    }
+    else if(textField == self.valorTextField )
+    {
+        [self.currencyFormatterTextFieldDelegate reformat:self.valorTextField];
+    }
+    
+    // Validate whether or not we enable the doneButton
+    [self commonValidateForm];
+    
+}
+
+-(void) commonValidateForm
+{
+#ifdef DEBUG
+    NSLog(@"%s self.cnpjFormatterDelegate: %d",__PRETTY_FUNCTION__, [self.cnpjFormatterDelegate validarCNPJ:[self.cnpjTextField.text removeNonNumeric]]);
+    NSLog(@"%s self.dateFormatterDelegate: %d",__PRETTY_FUNCTION__, [self.dateFormatterDelegate validateDate:[self.dataTextField.text removeNonNumeric]]);
+    NSLog(@"%s self.cooTextField.text.length == 6: %d",__PRETTY_FUNCTION__, self.cooTextField.text.length == 6);
+    NSLog(@"%s [self.totalTextField.text doubleValue] > 0.f: %d",__PRETTY_FUNCTION__, [self.valorTextField.text doubleValue] > 0.f);
+#endif
+    
+    [self.donateButton setEnabled:(
+                                 [self.cnpjFormatterDelegate validarCNPJ:[self.cnpjTextField.text removeNonNumeric]] &&
+                                 [self.dateFormatterDelegate validateDate:[self.dataTextField.text removeNonNumeric]] &&
+                                 self.cooTextField.text.length == 6 &&
+                                 [self.valorTextField.text doubleValue] > 0.f
+                                 )];
+}
+
 
 
 @end

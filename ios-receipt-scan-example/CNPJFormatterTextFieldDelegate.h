@@ -1,5 +1,5 @@
 //
-//  NFNReceiptRecognitionViewController.h
+//  CNPJFormatterTextFieldDelegate.h
 //  ios-receipt-scan-example
 //
 //  Version 0.0.1
@@ -31,28 +31,13 @@
 //  THE SOFTWARE.
 //
 
-// Libraries
+#import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import <MBProgressHUD/MBProgressHUD.h>
+#import <QuartzCore/QuartzCore.h>
 
-// Security
-#import "PassCode.h"
-#import "CounterSignCode.h"
+@interface CNPJFormatterTextFieldDelegate : NSObject<UITextFieldDelegate>
 
-// Services
-#import "NFNOCRService.h"
-
-// Categories
-#import "NSString+Numeric.h"
-
-// Delegates
-#import "CNPJFormatterTextFieldDelegate.h"
-#import "DateFormatterTextFieldDelegate.h"
-#import "CurrencyFormatterTextFieldDelegate.h"
-#import "COOFormatterTextFieldDelegate.h"
-
-@interface NFNReceiptRecognitionViewController : UIViewController<NFNOCRServiceDelegate>
-
-@property (strong, nonatomic) UIImage* image;
+-(void)reformat:(UITextField *)textField;
+-(BOOL)validarCNPJ:(NSString *)cnpj;
 
 @end
