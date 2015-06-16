@@ -1,4 +1,3 @@
 language: objective-c
 xcode_workspace: ios-receipt-scan-example.xcworkspace
-xcode_scheme: ios-receipt-scan-exampleTests
 xcode_sdk: iphonesimulator
