@@ -51,8 +51,15 @@
 #import "CurrencyFormatterTextFieldDelegate.h"
 #import "COOFormatterTextFieldDelegate.h"
 
+/**
+ *  Class the represents the receipt recognition view controller on Storyboard
+ *  @author Paulo Miguel Almeida Rodenas &lt;paulo.ubuntu@gmail.com&gt;
+ */
 @interface NFNReceiptRecognitionViewController : UIViewController<NFNOCRServiceDelegate>
 
+/**
+ *  image reference from the camera view controller
+ */
 @property (strong, nonatomic) UIImage* image;
 
 @end

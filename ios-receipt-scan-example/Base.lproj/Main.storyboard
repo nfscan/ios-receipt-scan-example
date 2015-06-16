@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
     <scenes>
         <!--Camera Rect Detection View Controller-->
@@ -226,7 +226,7 @@
                         <outlet property="dataView" destination="nC1-w6-VDB" id="ffK-B6-mrW"/>
                         <outlet property="donateButton" destination="jlG-up-db7" id="KBO-5j-8rq"/>
                         <outlet property="thankYouView" destination="8Qs-rV-1lA" id="zWt-Zu-vlh"/>
-                        <outlet property="valorTextField" destination="g3d-9c-AQH" id="0ck-OG-64D"/>
+                        <outlet property="totalTextField" destination="g3d-9c-AQH" id="Luk-8x-wuq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RIk-rV-a0a" userLabel="First Responder" sceneMemberID="firstResponder"/>
