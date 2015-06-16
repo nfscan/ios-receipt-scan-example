@@ -50,6 +50,12 @@
 #import "PassCode.h"
 #import "CounterSignCode.h"
 
+/**
+ * Enum that specifies which request we're performing
+ * when receiving events through NFNOCRServiceDelegate
+ *
+ * @see NFNOCRServiceDelegate
+ */
 typedef enum : NSUInteger {
     PROCESS_AUTH_REQUEST,
     PROCESS_START_REQUEST,
@@ -57,20 +63,72 @@ typedef enum : NSUInteger {
     DONATE_REQUEST,
 } RequestIdentifier;
 
+/**
+ *  A delegate that acts on behalf of NFNOCRService when we receive http responses from nfscan-server
+ *  @author Paulo Miguel Almeida Rodenas &lt;paulo.ubuntu@gmail.com&gt;
+ */
 @protocol NFNOCRServiceDelegate <NSObject>
 
+/**
+ *  Method called when the response is successfully received (HTTP Code 200) and parsed into a JSON array
+ *
+ *  @param identifier identifies which request this response if from
+ *  @param jsonArray  a JSON array containing the response got from server
+ */
 -(void) sucessOnRequest:(RequestIdentifier)identifier jsonResponse:(NSDictionary *)jsonArray;
+
+/**
+ *  Method called when the response isn't received (HTTP Code != 200) correctly
+ *
+ *  @param identifier identifies which request this response if from
+ *  @param jsonArray  a JSON array containing the response got from server if any
+ */
 -(void) errorOnRequest:(RequestIdentifier)identifier jsonResponse:(NSDictionary *)jsonArray;
 
 @end
 
+/**
+ *  Class that deals with all http requests related to the donation flow
+ *  @author Paulo Miguel Almeida Rodenas &lt;paulo.ubuntu@gmail.com&gt;
+ */
 @interface NFNOCRService : NSObject
 
+/**
+ *  delegate reference to a class that deals with http responses
+ */
 @property(retain,nonatomic) id<NFNOCRServiceDelegate> delegate;
 
+/**
+ *  Request the process authentication endpoint
+ */
 -(void) requestProcessAuth;
+
+/**
+ *  Request the process start endpoint
+ *
+ *  @param transactionId    transaction id generated on auth method
+ *  @param counterSignature counter signature generated from your app
+ *  @param image            UIImage to be processed
+ * 
+ *  @see PassCode
+ *  @see CounterSignCode
+ */
 -(void) requestProcessStart:(NSString*) transactionId counterSignature:(NSString*)counterSignature receipt:(UIImage*) image;
+
+/**
+ *  Request the process check endpoint
+ *
+ *  @param transactionId    transaction id generated on auth method
+ *  @param counterSignature counter signature generated from your app
+ */
 -(void) requestProcessCheck:(NSString*) transactionId counterSignature:(NSString*)counterSignature;
+
+/**
+ *  Request the donation endpoint
+ *
+ *  @param transactionId transaction id generated on auth method
+ *  @param receipt       Receipt object
+ */
 -(void) requestDonate:(NSString*) transactionId receipt:(TaxReceipt*) receipt;
 
 @end

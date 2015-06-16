@@ -34,8 +34,27 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+/**
+ *  Class that provides methods for formatting date values
+ *  @author Paulo Miguel Almeida Rodenas &lt;paulo.ubuntu@gmail.com&gt;
+ */
 @interface DateFormatterTextFieldDelegate : NSObject<UITextFieldDelegate>
 
+/**
+ *  Format input text to date format even though it's
+ *  just a parcial value yet.
+ *
+ *  @param textField text field reference
+ */
 -(void)reformat:(UITextField *)textField;
+
+/**
+ *  Validate whether or not this is a valid date
+ *
+ *  @param dateStr NSString you want to validate
+ *
+ *  @return YES if valid or NO otherwise
+ */
 -(BOOL) validateDate:(NSString*) dateStr;
+
 @end

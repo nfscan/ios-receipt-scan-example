@@ -119,6 +119,14 @@
 - (IBAction)donateButtonHandler:(id)sender {
     self.dataView.hidden = YES;
     
+    NSDateFormatter * dateFormatter = [[NSDateFormatter alloc] init];
+    dateFormatter.dateFormat = [Constants DATE_FORMAT];
+    
+    self.receipt.cnpj = [self.cnpjTextField.text removeNonNumeric];
+    self.receipt.date = [dateFormatter dateFromString:self.dataTextField.text];
+    self.receipt.coo = self.cooTextField.text;
+    self.receipt.total = [self.valorTextField.text doubleValue];
+    
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     hud.mode = MBProgressHUDModeIndeterminate;
     
@@ -127,7 +135,7 @@
     dispatch_queue_t serverDelaySimulationThread = dispatch_queue_create("com.github.nfscan.ios-receipt-scan-example.serverUpload", nil);
     dispatch_async(serverDelaySimulationThread, ^{
         dispatch_async(dispatch_get_main_queue(), ^{
-            [weakSelf.ocrService requestDonate:self.transactionId receipt:self.receipt];
+            [weakSelf.ocrService requestDonate:weakSelf.transactionId receipt:weakSelf.receipt];
         });
     });
     

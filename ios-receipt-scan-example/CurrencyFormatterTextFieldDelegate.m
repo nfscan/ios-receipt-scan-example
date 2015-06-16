@@ -35,6 +35,12 @@
 
 @implementation CurrencyFormatterTextFieldDelegate
 
+/**
+ *  Format input text to currency format even though it's
+ *  just a parcial value yet.
+ *
+ *  @param textField text field reference
+ */
 -(void)reformat:(UITextField *)textField
 {
     
@@ -54,6 +60,20 @@
     
 }
 
+/**
+ *  Asks the delegate if editing should stop in the specified
+ *  text field.
+ *
+ *  The text field calls this method whenever the user types
+ *  new character in the text field or deletes an existing
+ *  character.
+ *
+ *  @param textField The text field containing the text.
+ *  @param range     The range of characters to be replaced.
+ *  @param string    The replacement string.
+ *
+ *  @return YES if the specified text range should be replaced; otherwise, NO to keep the old text.
+ */
 - (BOOL)textField:(UITextField*)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString*)string
 {
     NSInteger MAX_DIGITS = 11; // $999,999,999.99

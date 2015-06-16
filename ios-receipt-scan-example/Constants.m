@@ -37,6 +37,11 @@
 
 // HTTP Endpoints
 
+/**
+ *  Return the base url
+ *
+ *  @return a NSString
+ */
 +(NSString*) HOST{
     static NSString* baseUrl;
     static dispatch_once_t onceToken;
@@ -55,26 +60,51 @@
     return baseUrl;
 }
 
+/**
+ *  Return the process authentication http endpoint
+ *
+ *  @return a NSString
+ */
 +(NSString*) PROCESS_AUTH_SERVICE
 {
     return [[Constants HOST] stringByAppendingString:[NSString stringWithFormat:@"fe/taxreceipts/process/auth.action"]];
 }
 
+/**
+ *  Return the process start http endpoint
+ *
+ *  @return a NSString
+ */
 +(NSString*) PROCESS_START_SERVICE
 {
     return [[Constants HOST] stringByAppendingString:[NSString stringWithFormat:@"fe/taxreceipts/process/start.action"]];
 }
 
+/**
+ *  Return the process check http endpoint
+ *
+ *  @return a NSString
+ */
 +(NSString*) PROCESS_CHECK_SERVICE
 {
     return [[Constants HOST] stringByAppendingString:[NSString stringWithFormat:@"fe/taxreceipts/process/check.action"]];
 }
 
+/**
+ *  Return the donate http endpoint
+ *
+ *  @return a NSString
+ */
 +(NSString*) DONATE_SERVICE
 {
     return [[Constants HOST] stringByAppendingString:[NSString stringWithFormat:@"fe/taxreceipts/process/donate.action"]];
 }
 
+/**
+ *  Return the Date format expected by the nfscan-server
+ *
+ *  @return a NSString
+ */
 +(NSString*) DATE_FORMAT
 {
     static NSString* value;

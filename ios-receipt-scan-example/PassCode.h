@@ -33,8 +33,19 @@
 
 #import <Foundation/Foundation.h>
 
+/**
+ *  Class in charge of dealing with the logic for pass signature validation
+ *  @author Paulo Miguel Almeida Rodenas &lt;paulo.ubuntu@gmail.com&gt;
+ */
 @interface PassCode : NSObject
 
+/**
+ *  Check whether or not this is a valid pass signature
+ *
+ *  @param passInput NSString containing the pass signature
+ *
+ *  @return YES if t's valid, NO otherwise
+ */
 -(BOOL) validatePass:(NSString*) passInput;
 
 @end
