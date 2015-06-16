@@ -1,4 +1,5 @@
 # ios-receipt-scan-example 
+[![Build Status](https://travis-ci.org/nfscan/ios-receipt-scan-example.svg?branch=master)](https://travis-ci.org/nfscan/ios-receipt-scan-example) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/nfscan/ios-receipt-scan-example/master/LICENSE)
 
 Simple iOS client [white label](https://en.wikipedia.org/wiki/White-label_product) for [nfscan](https://github.com/nfscan/nfscan) 
 
