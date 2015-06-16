@@ -35,9 +35,28 @@
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
 
+/**
+ *  Class that provides methods for formatting input text
+ *  into a valid CNPJ
+ *  @author Paulo Miguel Almeida Rodenas &lt;paulo.ubuntu@gmail.com&gt;
+ */
 @interface CNPJFormatterTextFieldDelegate : NSObject<UITextFieldDelegate>
 
+/**
+ *  Format input text to CNPJ format even though it's
+ *  just a parcial value yet.
+ *
+ *  @param textField text field reference
+ */
 -(void)reformat:(UITextField *)textField;
+
+/**
+ *  Validate whether or not this is a valid CNPJ
+ *
+ *  @param cnpj NSString you want to validate
+ *
+ *  @return YES if valid or NO otherwise
+ */
 -(BOOL)validarCNPJ:(NSString *)cnpj;
 
 @end

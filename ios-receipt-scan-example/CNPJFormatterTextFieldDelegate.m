@@ -34,8 +34,13 @@
 #import "CNPJFormatterTextFieldDelegate.h"
 
 @interface CNPJFormatterTextFieldDelegate()
-
+/**
+ *  Variable that holds the previous content in case we need to undo some operation
+ */
 @property(strong,nonatomic) NSString *previousTextFieldContent;
+/**
+ *  Variable thata holds the previous selection
+ */
 @property(strong,nonatomic) UITextRange *previousSelection;
 
 @end
@@ -85,7 +90,20 @@
         textField.layer.borderColor=[[UIColor clearColor]CGColor];
     }
 }
-
+/**
+ *  Asks the delegate if editing should stop in the specified 
+ *  text field.
+ *
+ *  The text field calls this method whenever the user types
+ *  new character in the text field or deletes an existing 
+ *  character.
+ *
+ *  @param textField The text field containing the text.
+ *  @param range     The range of characters to be replaced.
+ *  @param string    The replacement string.
+ *
+ *  @return YES if the specified text range should be replaced; otherwise, NO to keep the old text.
+ */
 -(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
 {
     // Note textField's current state before performing the change, in case
@@ -96,6 +114,15 @@
     return YES;
 }
 
+/**
+ *  Remove characters that aren't digits and update the 
+ *  instance cursor position
+ *
+ *  @param string         NSString text you want to
+ *  @param cursorPosition cursor position pointer
+ *
+ *  @return A NSString containing digits only
+ */
 - (NSString *)removeNonDigits:(NSString *)string
     andPreserveCursorPosition:(NSUInteger *)cursorPosition
 {
@@ -120,7 +147,14 @@
     return digitsOnlyString;
 }
 
-
+/**
+ *  Format it into a CNPJ formatting style
+ *
+ *  @param string         NSString you want
+ *  @param cursorPosition cursor position pointer
+ *
+ *  @return A NSString containing a formatted CNPJ
+ */
 - (NSString *)insertFormattingIntoString:(NSString *)string
                           andPreserveCursorPosition:(NSUInteger *)cursorPosition
 {
@@ -155,9 +189,7 @@
 
 -(BOOL)validarCNPJ:(NSString *)cnpj {
     
-    int retornoVerificarComuns = [self verificarComunsCNPJ:cnpj];
-    
-    if(retornoVerificarComuns == 0)
+    if([self verificarComunsCNPJ:cnpj])
     {
         BOOL retornoValidarDigitos = [self validarDigitosCNPJ:cnpj];
         return retornoValidarDigitos ;
@@ -168,6 +200,13 @@
     }
 }
 
+/**
+ *  Validate whether or not these are a valid CNPJ check digits
+ *
+ *  @param cnpj NSString you want to validate
+ *
+ *  @return YES if valid or NO otherwise
+ */
 -(BOOL)validarDigitosCNPJ:(NSString *)cnpj {
     
     NSInteger soma = 0;
@@ -228,29 +267,27 @@
     
 }
 
--(int)verificarComunsCNPJ:(NSString *)cnpj {
-    /*
-     0 - Validado
-     1 - Não possui 14 digitos
-     2 - CNPJ não permitido: Sequencia de números
-     */
-    if ([cnpj length] != 14 || [cnpj isEqualToString:@""]) {
-        return 1;
-    } else if (   [cnpj isEqualToString:@"00000000000000"]
-               || [cnpj isEqualToString:@"11111111111111"]
-               || [cnpj isEqualToString:@"22222222222222"]
-               || [cnpj isEqualToString:@"33333333333333"]
-               || [cnpj isEqualToString:@"44444444444444"]
-               || [cnpj isEqualToString:@"55555555555555"]
-               || [cnpj isEqualToString:@"66666666666666"]
-               || [cnpj isEqualToString:@"77777777777777"]
-               || [cnpj isEqualToString:@"88888888888888"]
-               || [cnpj isEqualToString:@"99999999999999"]){
-        return 2;
-    }
-    else{
-        return 0;
-    }
+/**
+ *  Check if we have a cnpj value that is valid but it's not
+ *  a true value such as 0000000000000, 11111111111111 and so on
+ *
+ *  @param cnpj NSString you want to validate
+ *
+ *  @return YES if valid or NO otherwise
+ */
+-(BOOL)verificarComunsCNPJ:(NSString *)cnpj {
+    return !([cnpj length] != 14 ||
+    [cnpj isEqualToString:@""] ||
+    [cnpj isEqualToString:@"00000000000000"] ||
+    [cnpj isEqualToString:@"11111111111111"] ||
+    [cnpj isEqualToString:@"22222222222222"] ||
+    [cnpj isEqualToString:@"33333333333333"] ||
+    [cnpj isEqualToString:@"44444444444444"] ||
+    [cnpj isEqualToString:@"55555555555555"] ||
+    [cnpj isEqualToString:@"66666666666666"] ||
+    [cnpj isEqualToString:@"77777777777777"] ||
+    [cnpj isEqualToString:@"88888888888888"] ||
+    [cnpj isEqualToString:@"99999999999999"]);
 }
 
 @end

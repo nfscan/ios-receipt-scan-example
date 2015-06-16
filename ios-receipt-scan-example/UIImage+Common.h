@@ -33,13 +33,57 @@
 
 #import <UIKit/UIKit.h>
 
+/**
+ *  UIImage category that provides methods to deal with
+ *  common image processings
+ *  @author Paulo Miguel Almeida Rodenas &lt;paulo.ubuntu@gmail.com&gt;
+ */
 @interface UIImage (Common)
-
+/**
+ *  Crop a rect from image
+ *
+ *  @param rectOfInterest rect you want to crop
+ *
+ *  @return an image
+ */
 -(UIImage*) cropImage:(CGRect) rectOfInterest;
+
+/**
+ *  Draw an image over the current image within a rect
+ *
+ *  @param inputImage image you want to draw
+ *  @param frame      rect where it'll be draw
+ *
+ *  @return an image
+ */
 -(UIImage *)drawImage:(UIImage *)inputImage inRect:(CGRect)frame;
--(UIImage*) drawOverlayWithColor:(UIColor*) color;
+
+/**
+ *  Resize image keeping the aspect ratio
+ *
+ *  @param i_width width you want to resize to
+ *
+ *  @return an image
+ */
 -(UIImage*) resizeToWidth: (float) i_width;
+
+/**
+ *  Convert image to the base64 representation using JPEG
+ *  representation and compression quality 1.0 (100%)
+ *
+ *  @return a NSString
+ */
+
 -(NSString*) base64StringFromImage;
+
+/**
+ *  Convert image to the base64 representation using JPEG
+ *  representation and compression quality
+ *
+ *  @param quality compressiong quality
+ *
+ *  @return a NSString
+ */
 -(NSString*) base64StringFromImage:(float) quality;
 
 @end
