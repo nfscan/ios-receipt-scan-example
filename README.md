@@ -4,26 +4,26 @@ Simple iOS client [white label](https://en.wikipedia.org/wiki/White-label_produc
 
 ## Usage
 
-1) Download the repository
+**1)** Download the repository
 
 ```
 $ git clone https://github.com/nfscan/ios-receipt-scan-example.git
 $ cd ios-receipt-scan-example
 ```
     
-2) Run CocoaPods
+**2)** Run CocoaPods
 
 ```
 $ pod install
 ```
 
-3) Open the project in Xcode
+**3)** Open the project in Xcode
 
 ```
 $ open ios-receipt-scan-example.xcworkspace
 ```
 
-4) Change nfscan service address on [Constants.m](https://github.com/nfscan/ios-receipt-scan-example/blob/master/ios-receipt-scan-example/Constants.m)
+**4)** Change nfscan service address on [Constants.m](https://github.com/nfscan/ios-receipt-scan-example/blob/master/ios-receipt-scan-example/Constants.m)
 
 ```Objective-C
 +(NSString*) HOST{
