@@ -33,7 +33,18 @@
 
 #import <Foundation/Foundation.h>
 
+/**
+ *  NSString category that provides methods to deal with 
+ *  numeric characters within a NSString
+ *  @author Paulo Miguel Almeida Rodenas &lt;paulo.ubuntu@gmail.com&gt;
+ */
 @interface NSString (Numeric)
+
+/**
+ *  Remove all non numeric characters from this NSString
+ *
+ *  @return a NSString
+ */
 
 -(NSString*) removeNonNumeric;
 

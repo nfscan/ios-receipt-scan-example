@@ -25,6 +25,11 @@ DerivedData
 #
 Pods/
 Podfile.lock
+*.xcworkspace/
 
 # Mac OS
 .DS_Store
+
+#Doxygen
+config~
+doc/

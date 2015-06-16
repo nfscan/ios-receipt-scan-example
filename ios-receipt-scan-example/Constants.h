@@ -33,15 +33,46 @@
 
 #import <Foundation/Foundation.h>
 
+/**
+ *  Class that provides utility constants across the application
+ */
 @interface Constants : NSObject
 
 // HTTP Endpoints
+/**
+ *  Return the process authentication http endpoint
+ *
+ *  @return a NSString
+ */
 +(NSString*) PROCESS_AUTH_SERVICE;
+
+/**
+ *  Return the process start http endpoint
+ *
+ *  @return a NSString
+ */
 +(NSString*) PROCESS_START_SERVICE;
+
+/**
+ *  Return the process check http endpoint
+ *
+ *  @return a NSString
+ */
 +(NSString*) PROCESS_CHECK_SERVICE;
+
+/**
+ *  Return the donate http endpoint
+ *
+ *  @return a NSString
+ */
 +(NSString*) DONATE_SERVICE;
 
 // MISC
 
+/**
+ *  Return the Date format expected by the nfscan-server
+ *
+ *  @return a NSString
+ */
 +(NSString*) DATE_FORMAT;
 @end
