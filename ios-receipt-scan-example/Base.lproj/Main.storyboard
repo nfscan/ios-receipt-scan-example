@@ -31,10 +31,14 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Ro9-7g-3Te" secondAttribute="bottom" constant="20" id="2UO-jZ-zsR"/>
                             <constraint firstAttribute="centerX" secondItem="Ro9-7g-3Te" secondAttribute="centerX" id="b2y-o9-vHL"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Rg2-xs-Uua" appends="YES" id="JVL-Cd-vGI"/>
+                        </connections>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                     <connections>
@@ -42,6 +46,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Rg2-xs-Uua">
+                    <connections>
+                        <action selector="focusGesture:" destination="vXZ-lx-hvc" id="Xdg-LR-JZg"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1827" y="449"/>
         </scene>

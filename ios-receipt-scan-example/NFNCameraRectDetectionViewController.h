@@ -44,6 +44,10 @@
 // View Controllers
 #import "NFNReceiptRecognitionViewController.h"
 
+/**
+ *  Class the represents the camera rectangle  view controller on Storyboard
+ *  @author Paulo Miguel Almeida Rodenas &lt;paulo.ubuntu@gmail.com&gt;
+ */
 @interface NFNCameraRectDetectionViewController : UIViewController<AVCaptureVideoDataOutputSampleBufferDelegate>
 
 @end
