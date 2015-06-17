@@ -52,12 +52,18 @@ $ open ios-receipt-scan-example.xcworkspace
 
 ![](screenshots/screen01.jpg)
 
-# Requirements
+## Requirements
 
 - Xcode 6.3
 - iOS 8
 
-# Credits
+## Contributing 
+
+You're encouraged to contribute to nfscan. Fork the code from https://github.com/nfscan/ios-receipt-scan-example and submit pull requests.
+
+Make sure you're following the [contributing guidelines](CONTRIBUTING.md) for this project.
+
+## Credits
 
 - [AFNetworking](https://github.com/AFNetworking/AFNetworking) for network request
 - [MBProgressHUD](https://github.com/jdg/MBProgressHUD) for progress indicator
