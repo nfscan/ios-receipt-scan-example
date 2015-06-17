@@ -34,13 +34,20 @@
 #import "NFNOCRService.h"
 
 @interface NFNOCRService()
-
+/**
+ *  AFHTTPRequestOperationManager encapsulates the common patterns of communicating with a web application over HTTP
+ */
 @property (strong, nonatomic) AFHTTPRequestOperationManager *manager;
 
 @end
 
 @implementation NFNOCRService
 
+/**
+ *  Default constructor
+ *
+ *  @return self
+ */
 -(instancetype)init
 {
     self = [super init];
@@ -50,6 +57,9 @@
     return self;
 }
 
+/**
+ *  Request the process authentication endpoint
+ */
 -(void) requestProcessAuth
 {
     [self.manager POST:[Constants PROCESS_AUTH_SERVICE] parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
@@ -74,6 +84,16 @@
     
 }
 
+/**
+ *  Request the process start endpoint
+ *
+ *  @param transactionId    transaction id generated on auth method
+ *  @param counterSignature counter signature generated from your app
+ *  @param image            UIImage to be processed
+ *
+ *  @see PassCode
+ *  @see CounterSignCode
+ */
 -(void) requestProcessStart:(NSString*) transactionId counterSignature:(NSString*)counterSignature receipt:(UIImage*) image
 {
     
@@ -108,6 +128,12 @@
     
 }
 
+/**
+ *  Request the process check endpoint
+ *
+ *  @param transactionId    transaction id generated on auth method
+ *  @param counterSignature counter signature generated from your app
+ */
 -(void) requestProcessCheck:(NSString*) transactionId counterSignature:(NSString*)counterSignature
 {
     NSDictionary *parameters = @{@"transactionId": transactionId, @"counterSignature": counterSignature};
@@ -126,6 +152,12 @@
     }];
 }
 
+/**
+ *  Request the donation endpoint
+ *
+ *  @param transactionId transaction id generated on auth method
+ *  @param receipt       Receipt object
+ */
 -(void) requestDonate:(NSString*) transactionId receipt:(TaxReceipt*) receipt
 {
     NSDateFormatter * dateFormatter = [[NSDateFormatter alloc] init];

@@ -33,11 +33,27 @@
 
 #import <Foundation/Foundation.h>
 
+/**
+ *  Class that represents the Receipt model
+ *  @author Paulo Miguel Almeida Rodenas &lt;paulo.ubuntu@gmail.com&gt;
+ */
 @interface TaxReceipt : NSObject
-
+/**
+ *  cnpj
+ */
 @property (strong, nonatomic) NSString* cnpj;
+/**
+ *  coo
+ */
 @property (strong, nonatomic) NSString* coo;
+/**
+ *  date
+ */
 @property (strong, nonatomic) NSDate* date;
+
+/**
+ *  total
+ */
 @property (nonatomic) double total;
 
 @end

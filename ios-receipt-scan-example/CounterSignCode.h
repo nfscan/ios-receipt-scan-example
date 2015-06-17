@@ -33,8 +33,21 @@
 
 #import <Foundation/Foundation.h>
 
+/**
+ *  Class in charge of dealing with the logic for counter signature generation
+ *  @author Paulo Miguel Almeida Rodenas &lt;paulo.ubuntu@gmail.com&gt;
+ */
 @interface CounterSignCode : NSObject
 
+/**
+ *  Generate a counter signature given the pass signature
+ *
+ *  @param passInput NSString containing the pass signature
+ *
+ *  @return a NSString
+ * 
+ *  @see PassCode
+ */
 -(NSString*) generate:(NSString*) passInput;
 
 @end

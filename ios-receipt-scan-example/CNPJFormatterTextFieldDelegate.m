@@ -49,6 +49,12 @@
 
 // Version 1.2
 // Source and explanation: http://stackoverflow.com/a/19161529/1709587
+/**
+ *  Format input text to CNPJ format even though it's
+ *  just a parcial value yet.
+ *
+ *  @param textField text field reference
+ */
 -(void)reformat:(UITextField *)textField
 {
     // In order to make the cursor end up positioned correctly, we need to
@@ -187,6 +193,13 @@
     return stringWithAddedSpaces;
 }
 
+/**
+ *  Validate whether or not this is a valid CNPJ
+ *
+ *  @param cnpj NSString you want to validate
+ *
+ *  @return YES if valid or NO otherwise
+ */
 -(BOOL)validarCNPJ:(NSString *)cnpj {
     
     if([self verificarComunsCNPJ:cnpj])

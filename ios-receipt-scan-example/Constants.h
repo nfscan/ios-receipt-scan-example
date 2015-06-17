@@ -35,6 +35,7 @@
 
 /**
  *  Class that provides utility constants across the application
+ *  @author Paulo Miguel Almeida Rodenas &lt;paulo.ubuntu@gmail.com&gt;
  */
 @interface Constants : NSObject
 

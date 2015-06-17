@@ -34,8 +34,18 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+/**
+ *  Class that provides methods for currency input text formatting
+ *  @author Paulo Miguel Almeida Rodenas &lt;paulo.ubuntu@gmail.com&gt;
+ */
 @interface CurrencyFormatterTextFieldDelegate : NSObject<UITextFieldDelegate>
 
+/**
+ *  Format input text to currency format even though it's
+ *  just a parcial value yet.
+ *
+ *  @param textField text field reference
+ */
 -(void)reformat:(UITextField *)textField;
 
 @end

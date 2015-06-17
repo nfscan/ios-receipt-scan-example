@@ -3,6 +3,8 @@
 
 Simple iOS client [white label](https://en.wikipedia.org/wiki/White-label_product) for [nfscan](https://github.com/nfscan/nfscan) 
 
+![](screenshots/screen02.jpg)
+
 ## Usage
 
 **1)** Download the repository
@@ -45,6 +47,10 @@ $ open ios-receipt-scan-example.xcworkspace
     return baseUrl;
 }
 ```
+
+5) Compile and run the app in your simulator
+
+![](screenshots/screen01.jpg)
 
 # Requirements
 

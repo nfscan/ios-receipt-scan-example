@@ -45,6 +45,12 @@
 
 // Version 1.2
 // Source and explanation: http://stackoverflow.com/a/19161529/1709587
+/**
+ *  Format input text to date format even though it's
+ *  just a parcial value yet.
+ *
+ *  @param textField text field reference
+ */
 -(void)reformat:(UITextField *)textField
 {
     // In order to make the cursor end up positioned correctly, we need to
@@ -63,7 +69,7 @@
         return;
     }
     
-    NSString *dateNumberWithSpaces = [self insertSpacesEveryFourDigitsIntoString:dateWithoutSpaces andPreserveCursorPosition:&targetCursorPosition];
+    NSString *dateNumberWithSpaces = [self insertFormattingIntoString:dateWithoutSpaces andPreserveCursorPosition:&targetCursorPosition];
     
     textField.text = dateNumberWithSpaces;
     UITextPosition *targetPosition =
@@ -97,6 +103,20 @@
 
 }
 
+/**
+ *  Asks the delegate if editing should stop in the specified
+ *  text field.
+ *
+ *  The text field calls this method whenever the user types
+ *  new character in the text field or deletes an existing
+ *  character.
+ *
+ *  @param textField The text field containing the text.
+ *  @param range     The range of characters to be replaced.
+ *  @param string    The replacement string.
+ *
+ *  @return YES if the specified text range should be replaced; otherwise, NO to keep the old text.
+ */
 -(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
 {
     // Note textField's current state before performing the change, in case
@@ -107,6 +127,15 @@
     return YES;
 }
 
+/**
+ *  Remove characters that aren't digits and update the
+ *  instance cursor position
+ *
+ *  @param string         NSString text you want to
+ *  @param cursorPosition cursor position pointer
+ *
+ *  @return A NSString containing digits only
+ */
 - (NSString *)removeNonDigits:(NSString *)string
     andPreserveCursorPosition:(NSUInteger *)cursorPosition
 {
@@ -131,8 +160,15 @@
     return digitsOnlyString;
 }
 
-
-- (NSString *)insertSpacesEveryFourDigitsIntoString:(NSString *)string
+/**
+ *  Format it into a date format style
+ *
+ *  @param string         NSString you want
+ *  @param cursorPosition cursor position pointer
+ *
+ *  @return A NSString containing a formatted date
+ */
+- (NSString *)insertFormattingIntoString:(NSString *)string
                           andPreserveCursorPosition:(NSUInteger *)cursorPosition
 {
     NSMutableString *stringWithAddedSpaces = [NSMutableString new];
@@ -154,6 +190,13 @@
     return stringWithAddedSpaces;
 }
 
+/**
+ *  Validate whether or not this is a valid date
+ *
+ *  @param dateStr NSString you want to validate
+ *
+ *  @return YES if valid or NO otherwise
+ */
 -(BOOL) validateDate:(NSString*) dateStr
 {
     @try {
