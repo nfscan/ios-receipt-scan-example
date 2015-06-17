@@ -48,7 +48,7 @@ $ open ios-receipt-scan-example.xcworkspace
 }
 ```
 
-5) Compile and run the app in your simulator
+**5)** Compile and run the app in your simulator
 
 ![](screenshots/screen01.jpg)
 
