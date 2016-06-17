@@ -316,7 +316,7 @@
     
     if([NetworkAvailabilityUtils isConnected])
     {
-        alertMessage = @"Something wen wrong";
+        alertMessage = @"Something went wrong";
     }
     else
     {
